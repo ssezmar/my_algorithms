@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 
-bool binary_search(const std::vector<int> v, const int& target) {
+int binary_search(const std::vector<int> v, const int& target) {
     int l, r;
     l = 0; 
     r = v.size()-1;
@@ -9,14 +9,14 @@ bool binary_search(const std::vector<int> v, const int& target) {
         int m = l + (r - l) / 2;
 
         if(v[m] == target) {
-            return true;
+            return 1;
         } else if(v[m] < target) {
             l = m + 1;
         } else {
             r = m - 1;
         }
     }
-    return false;    
+    return 0;    
 }
 
 void solve() {
